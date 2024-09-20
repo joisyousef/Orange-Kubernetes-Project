@@ -99,7 +99,7 @@ kubectl apply -f Services/Database-Service.yaml
 kubectl apply -f Volumes/Database-pv.yaml
 kubectl apply -f Volumes/Databasepvc.yaml
 kubectl apply -f Volumes/Database-Secret.yaml
-	```
+```
 
 3. **Expose the services**:
    Expose the proxy service to access the application:
