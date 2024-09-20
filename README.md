@@ -54,7 +54,7 @@ The project is organized into three tiers:
 ## Installation
 
 1. **Clone the repository**:
-		
+
    ```bash
    git clone https://github.com/joisyousef/Orange-Kubernetes-Project.git
    cd Orange-Kubernetes-Project
@@ -89,7 +89,7 @@ The project is organized into three tiers:
 2. **Deploy the application**:
    Apply the YAML files to deploy the proxy, backend, and database:
 
-   ```bash
+```bash
 kubectl apply -f Deployments/Backend-Deployment.yaml
 kubectl apply -f Deployments/Proxy-Deployment.yaml
 kubectl apply -f Deployments/Database-Deployment.yaml
@@ -99,7 +99,7 @@ kubectl apply -f Services/Database-Service.yaml
 kubectl apply -f Volumes/Database-pv.yaml
 kubectl apply -f Volumes/Databasepvc.yaml
 kubectl apply -f Volumes/Database-Secret.yaml
-   ```
+	```
 
 3. **Expose the services**:
    Expose the proxy service to access the application:
