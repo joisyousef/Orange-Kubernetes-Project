@@ -17,12 +17,7 @@ spec:
     spec:
       containers:
       - name: proxy
-        image: bedomm180/backend:latest
-        imagePullPolicy: Always
+        image: mohamedmaher77/proxy:latest
+        imagePullPolicy: Never
         ports:
         - containerPort: 443
-
-
-
-
-

@@ -11,4 +11,4 @@ spec:
   - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: "/var/mysql"
+    path: "/nginx-golang-mysql/db/password.txt"
