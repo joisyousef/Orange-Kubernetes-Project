@@ -108,8 +108,7 @@ kubectl apply -f Volumes/Database-Secret.yaml
 - **Database Credentials**: Ensure the secret with database credentials is mounted properly in the database deployment YAML.
 
 The output should look like this:
-
-![[Pasted image 20240920142915.png]]
+	![[image.png]]
 
 ---
 
