@@ -32,8 +32,8 @@ spec:
           mountPath: "/run/secrets"
       containers:
       - name: backend
-        image: mohamedmaher77/backend:latest
-        imagePullPolicy: Never
+        image: joisyousef/backend:latest
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8000
         volumeMounts:

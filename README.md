@@ -1,3 +1,7 @@
+# Orange Kubernetes Project
+---
+
+## Project Overview
 
 A Go-based application deployed using Docker and Kubernetes, consisting of three tiers: proxy, backend, and database. The project runs in a Kubernetes cluster with services and configurations managed through YAML files.
 
@@ -60,19 +64,7 @@ The project is organized into three tiers:
    cd Orange-Kubernetes-Project
    ```
 
-2. **Build Docker images**:
-   Build and push the backend, proxy, and database images to DockerHub.
-
-   Example for backend:
-   
-   ```bash
-   docker build -t your-dockerhub-username/backend:latest ./backend
-   docker push your-dockerhub-username/backend:latest
-   ```
-
-   Repeat for the proxy and database.
-
-3. **Start Minikube**:
+2. **Start Minikube**:
 
    ```bash
    minikube start
@@ -101,14 +93,8 @@ kubectl apply -f Volumes/Databasepvc.yaml
 kubectl apply -f Volumes/Database-Secret.yaml
 ```
 
-3. **Expose the services**:
-   Expose the proxy service to access the application:
-   
-   ```bash
-   kubectl expose deployment proxy-deployment --type=NodePort --port=80 --name=proxy-service
-   ```
 
-4. **Access the application**:
+3. **Access the application**:
    Get the Minikube IP:
    
    ```bash
