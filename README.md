@@ -54,6 +54,7 @@ The project is organized into three tiers:
 ## Installation
 
 1. **Clone the repository**:
+		
    ```bash
    git clone https://github.com/joisyousef/Orange-Kubernetes-Project.git
    cd Orange-Kubernetes-Project
@@ -63,6 +64,7 @@ The project is organized into three tiers:
    Build and push the backend, proxy, and database images to DockerHub.
 
    Example for backend:
+   
    ```bash
    docker build -t your-dockerhub-username/backend:latest ./backend
    docker push your-dockerhub-username/backend:latest
@@ -71,6 +73,7 @@ The project is organized into three tiers:
    Repeat for the proxy and database.
 
 3. **Start Minikube**:
+
    ```bash
    minikube start
    ```
@@ -78,12 +81,14 @@ The project is organized into three tiers:
 ## Running the Application
 
 1. **Create a namespace**:
+
    ```bash
    kubectl create namespace webapp
    ```
 
 2. **Deploy the application**:
    Apply the YAML files to deploy the proxy, backend, and database:
+
    ```bash
 kubectl apply -f Deployments/Backend-Deployment.yaml
 kubectl apply -f Deployments/Proxy-Deployment.yaml
@@ -98,15 +103,18 @@ kubectl apply -f Volumes/Database-Secret.yaml
 
 3. **Expose the services**:
    Expose the proxy service to access the application:
+   
    ```bash
    kubectl expose deployment proxy-deployment --type=NodePort --port=80 --name=proxy-service
    ```
 
 4. **Access the application**:
    Get the Minikube IP:
+   
    ```bash
    minikube ip
    ```
+   
    Access the application at `http://<minikube-ip>:<node-port>`.
 
 ## Configuration
@@ -118,7 +126,7 @@ The output should look like this:
 ![[Pasted image 20240920142915.png]]
 
 ---
-		
+
 **Terminate the application**
 
 ```
