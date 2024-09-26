@@ -1,4 +1,5 @@
 # Orange Kubernetes Project
+
 ---
 
 ## Project Overview
@@ -6,14 +7,18 @@
 A Go-based application deployed using Docker and Kubernetes, consisting of three tiers: proxy, backend, and database. The project runs in a Kubernetes cluster with services and configurations managed through YAML files.
 
 ## Table of Contents
-1. [Introduction](#introduction)
-2. [Technologies Used](#technologies-used)
-3. [Architecture](#architecture)
-4. [Prerequisites](#prerequisites)
-5. [Installation](#installation)
-6. [Running the Application](#running-the-application)
-7. [Configuration](#configuration)
-8. [License](#license)
+
+- [Orange Kubernetes Project](#orange-kubernetes-project)
+  - [Project Overview](#project-overview)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Technologies Used](#technologies-used)
+  - [Architecture](#architecture)
+    - [Key Components:](#key-components)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Application](#running-the-application)
+  - [Configuration](#configuration)
 
 ## Introduction
 
@@ -89,18 +94,17 @@ kubectl apply -f Services/Backend-Service.yaml
 kubectl apply -f Services/Nodeport.yaml
 kubectl apply -f Services/Database-Service.yaml
 kubectl apply -f Volumes/Database-pv.yaml
-kubectl apply -f Volumes/Databasepvc.yaml
+kubectl apply -f Volumes/Database-pvc.yaml
 kubectl apply -f Volumes/Database-Secret.yaml
 ```
 
-
 3. **Access the application**:
    Get the Minikube IP:
-   
+
    ```bash
    minikube ip
    ```
-   
+
    Access the application at `http://<minikube-ip>:<node-port>`.
 
 ## Configuration
@@ -108,7 +112,8 @@ kubectl apply -f Volumes/Database-Secret.yaml
 - **Database Credentials**: Ensure the secret with database credentials is mounted properly in the database deployment YAML.
 
 The output should look like this:
-	![[image.png]]
+
+![[image.png]]
 
 ---
 
@@ -121,4 +126,3 @@ kubectl delete pv db-pv
 kubectl delete services --all -n webapp
 kubectl delete secrets --all -n webapp
 ```
-
