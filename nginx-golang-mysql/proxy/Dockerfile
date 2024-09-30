@@ -5,4 +5,4 @@ RUN apk add --no-cache openssl bash
 COPY ./nginx.conf /etc/nginx/nginx.conf
 # Copy SSL certificates
 CMD ["nginx", "-g", "daemon off;"]
-EXPOSE 443
+EXPOSE 443    
