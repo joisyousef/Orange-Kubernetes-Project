@@ -94,7 +94,7 @@ kubectl apply -f Services/Backend-Service.yaml
 kubectl apply -f Services/Nodeport.yaml
 kubectl apply -f Services/Database-Service.yaml
 kubectl apply -f Volumes/Database-pv.yaml
-kubectl apply -f Volumes/Database-pvc.yaml
+kubectl apply -f Volumes/Database-     pvc.yaml
 kubectl apply -f Volumes/Database-Secret.yaml
 ```
 
